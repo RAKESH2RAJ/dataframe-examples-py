@@ -10,16 +10,16 @@ sudo systemctl unmask mongodb
 ---------------------------------------
 mongo
 
-use school;
+
+
+# Make this remote MongoDB instance accessible to your local machine
+------------------------------------use school;
 db.students.insert({ "studentno":"1","firstname":"varun","lastname":"goyal"})
 db.students.insert({ "studentno":"2","firstname":"tarun","lastname":"sing","school":"AMS"})
 db.students.insert([{ "studentno":"3","firstname":"arun","lastname":"pal","school":"Modern"},
 { "studentno":"4","firstname":"sachin","lastname":"tiwari","school":"dps"},
 { "studentno":"5","firstname":"rahul","lastname":"negi","school":"nps"}])
-db.students..find()
-
-# Make this remote MongoDB instance accessible to your local machine
----------------------------------------
+db.students.find()
 cd ../..
 cd etc/
 sudo vi mongod.conf
